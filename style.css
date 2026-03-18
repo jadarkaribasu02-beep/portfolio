@@ -1,6 +1,38 @@
-body{
-margin:0;
-overflow-x:hidden;
+body {
+    background: #fdfaf6;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(241, 229, 229, 0.6);
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    animation: float 12s infinite alternate ease-in-out;
+}
+
+body::before {
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px) translateX(0px);
+    }
+    to {
+        transform: translateY(-50px) translateX(50px);
+    }
 }
 
 .footer{
@@ -56,3 +88,7 @@ text-align:left;
 margin:0% 3%;
 }
 }
+html {
+    scroll-behavior:smooth;
+}
+
