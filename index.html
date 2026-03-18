@@ -16,7 +16,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 69px;
+            height: 55px;
             background-color: #f1e5e5;
 
         }
@@ -35,14 +35,14 @@
             text-decoration: none;
 
 
-            font-size: 30px;
+            font-size: 25px;
 
         }
 
         nav ul li a:hover {
             color: rgb(91, 9, 34);
             text-decoration: none;
-            font-size: 31px;
+            font-size: 24px;
         }
 
         .left {
@@ -56,7 +56,7 @@
             display: flex;
             justify-content: space-around;
 
-            margin: 50px 0;
+            margin: 150px 0;
         }
 
         .firstsection>div {
@@ -71,18 +71,89 @@
 
         .leftsection {
             margin: 120px 0;
-            font-size: 5.2rem;
+            font-size: 2.2rem;
 
         }
-        .leftsection .btn{
-           background-color: rgb(233, 241, 239);
-           padding: 15px;
-           border: 3p rgb(201, 200, 219);
-        
-          
-           background-color: rgb(240, 240, 244);
+
+        .leftsection .btn {
+            background-color: rgb(233, 241, 239);
+            padding: 15px;
+            border: 3p rgb(201, 200, 219);
+
+
+            background-color: rgb(240, 240, 244);
 
         }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 30px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
 
         .rightsection img {
             width: 65%;
@@ -158,8 +229,6 @@
             color: rgb(114, 105, 105);
 
         }
-
-      
     </style>
 </head>
 
@@ -191,9 +260,11 @@
                     </div>
                     <span id="element"></span>
                     <div class="buttons">
-                      <button class="btn">github</button> 
-                      <button class="btn">instagram</button>   
+
                     </div>
+                    <a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D"
+                        class="glow-on-hover" type="button" > instagram</a>
+                    
 
 
                 </div>
@@ -214,9 +285,9 @@
                         c
                     </div>
                     <div class="verticle-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maxime eius corrupti itaque?
-                        Facere repudiandae labore quasi consequatur architecto neque hic beatae voluptas, quae animi
-                        perferendis repellendus quisquam minima nostrum!
+                        I started my programming journey with C, where I learned the basics of logic building and
+                        problem solving. It helped me understand how code works at a deeper level and built my
+                        foundation in programming.
                     </div>
                 </div>
                 <div class="vertical">
@@ -225,9 +296,8 @@
                         python
                     </div>
                     <div class="verticle-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maxime eius corrupti itaque?
-                        Facere repudiandae labore quasi consequatur architecto neque hic beatae voluptas, quae animi
-                        perferendis repellendus quisquam minima nostrum!
+                        After learning C, I moved to Python to write cleaner and faster code. I use Python to practice
+                        problem solving and build simple programs, improving my thinking and coding skills.
                     </div>
                 </div>
                 <div class="vertical">
@@ -236,9 +306,8 @@
                         HTML
                     </div>
                     <div class="verticle-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maxime eius corrupti itaque?
-                        Facere repudiandae labore quasi consequatur architecto neque hic beatae voluptas, quae animi
-                        perferendis repellendus quisquam minima nostrum!
+                        I began my web development journey with HTML, where I learned how to structure web pages. It was
+                        my first step into creating something visible on the internet.
                     </div>
                 </div>
                 <div class="vertical">
@@ -247,9 +316,8 @@
                         css
                     </div>
                     <div class="verticle-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maxime eius corrupti itaque?
-                        Facere repudiandae labore quasi consequatur architecto neque hic beatae voluptas, quae animi
-                        perferendis repellendus quisquam minima nostrum!
+                        With CSS, I started designing and styling my web pages. I enjoy making simple pages look clean
+                        and attractive, and I’m continuously improving my design skills.
                     </div>
                 </div>
                 <div class="vertical">
@@ -258,9 +326,8 @@
                         git hub
                     </div>
                     <div class="verticle-desc">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste maxime eius corrupti itaque?
-                        Facere repudiandae labore quasi consequatur architecto neque hic beatae voluptas, quae animi
-                        perferendis repellendus quisquam minima nostrum!
+                        I use GitHub to store and manage my projects. It helps me track my progress and build my online
+                        presence as a developer.
                     </div>
                 </div>
 
@@ -270,48 +337,50 @@
 
     </main>
     <!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
-</head>
-<body>
-<footer>
-<div class="footer">
-<div class="row">
-<a href="https://github.com/jadarkaribasu02-beep" target="_blank"><i class="fa fa-github"></i></a>
-<a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D" target="_blank"><i class="fa fa-instagram"></i></a>
-<a href="tel:7259738091"><i class="fa fa-phone"></i></a>
-<a href="mailto:jadarkaribasu02@gmail.com"><i class="fa fa-envelope"></i></a>
-</div>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    </head>
 
-<div class="row">
-<ul>
-<li><a href="#">Contact us</a></li>
-<li><a href="#">Our Services</a></li>
-<li><a href="#">Privacy Policy</a></li>
-<li><a href="#">Terms & Conditions</a></li>
-<li><a href="#">Career</a></li>
-</ul>
-</div>
+    <body>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="https://github.com/jadarkaribasu02-beep" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D" target="_blank"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="tel:7259738091"><i class="fa fa-phone"></i></a>
+                    <a href="mailto:jadarkaribasu02@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
 
-<div class="row">
-Copyright © 2021 karibasu- All rights reserved || Designed By: karibasu
-</div>
-</div>
-</footer>
+                <div class="row">
+                    <ul>
+                        <li><a href="home">Contact us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    Copyright © 2021 karibasu- All rights reserved || Designed By: karibasu
+                </div>
+            </div>
+        </footer>
 
 
-    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['web developer', ' and designer', 'developer...'],
-            typeSpeed: 50,
-        });
-    </script>
-</body>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <!-- Setup and start animation! -->
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['web developer', ' and designer', 'developer...'],
+                typeSpeed: 50,
+            });
+        </script>
+    </body>
 </body>
 
 </html>
