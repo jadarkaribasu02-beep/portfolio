@@ -1,6 +1,7 @@
 body {
-    background: #fdfaf6;
+    background:#f8f0fb;
     overflow-x: hidden;
+    background-image: -moz-element();
 }
 
 body::before,
@@ -9,7 +10,7 @@ body::after {
     position: fixed;
     width: 400px;
     height: 400px;
-    background: rgba(241, 229, 229, 0.6);
+    
     border-radius: 50%;
     filter: blur(100px);
     z-index: -1;
@@ -58,6 +59,7 @@ transition:0.5s;
 
 .footer .row a:hover{
 color:#10c278;
+animation: reverse;
 }
 
 .footer .row ul{
@@ -92,3 +94,318 @@ html {
     scroll-behavior:smooth;
 }
 
+nav {
+  position: relative;
+  top: 2%;
+  right: 0;
+  left: 500px;
+  width: 319px;
+  display: flex;
+  margin: 0 auto;
+  transform: translateY(-16%);
+  height: 20px;
+
+}
+
+div.left {
+  left: -1050px;
+  position: absolute;
+  color: #e6dedecf;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #6881fa;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 60%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: rgb(4, 0, 255);
+}
+
+nav a:nth-child(1):after {
+  background-color: red;
+}
+
+nav a:nth-child(2):before {
+  background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+  background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+  background-color: purple;
+}
+
+nav a:nth-child(3):after {
+  background-color: palevioletred;
+}
+
+#indicator {
+  position: absolute;
+  left: 6%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #3219f1;
+  border-radius: 5px;
+  transition: 0.3s ease left;
+  top: 28px;
+}
+
+nav a:hover {
+  color: #420332;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover~#indicator {
+  background: linear-gradient(130deg, yellow, red);
+  left: 9%;
+}
+
+nav a:nth-child(2):hover~#indicator {
+  left: 43%;
+  background: linear-gradient(130deg, #00e2ff, #e44210);
+}
+
+nav a:nth-child(3):hover~#indicator {
+  left: 73%;
+  background: linear-gradient(130deg, purple, rgb(51, 206, 13));
+}
+
+nav a:nth-child(4):hover~#indicator {
+  left: 105%;
+  background: linear-gradient(130deg, #d3f10f, rgb(214, 245, 12));
+}
+
+
+        .left {
+            font-size: 2rem;
+            font-family:unset;
+
+
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+
+            margin: 150px 0;
+        }
+
+        .firstsection>div {
+
+            width: 40%;
+        }
+
+        .firsktsection div {
+
+            width: 30%;
+        }
+        
+
+        .leftsection {
+            margin: 120px 0;
+            font-size: 2.2rem;
+
+        }
+
+        .leftsection .btn {
+            background-color: rgb(233, 241, 239);
+            padding: 10px;
+            border: 3p rgb(201, 200, 219);
+            size: 2px;
+
+
+            background-color: rgb(240, 240, 244);
+
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 30px;
+            border: none;
+            outline: none;
+            color: #2e24ba;
+            background: #f8f0fb;;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 7.1px;
+            text-decoration: none;
+            top: -415px;
+            font-size: 29.5px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #160303, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 340%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 2px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            size: 100px;
+            
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+
+        .rightsection img {
+            width: 65%;
+            height: 50px 0;
+
+        }
+
+        .red {
+            color: rgb(14, 68, 169);
+        }
+
+        #element {
+            color: rgb(14, 68, 169);
+        }
+
+        .secondsection {
+            max-width: 90vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 3.4rem;
+            margin: 35px;
+
+        }
+
+        .secondsection .box {
+            background-color: rgb(198, 201, 204);
+            width: 79vw;
+            height: 3px;
+            margin: 30px;
+            display: flex;
+
+        }
+
+        .secondsection span {
+            margin: 44.3px;
+            position: relative;
+            top: 32px;
+        }
+
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: rgb(199, 199, 234);
+            margin: 0 120px;
+
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 25px;
+        }
+
+        .verticle-desc {
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+            top: 77px;
+            width: 150px;
+            font-size: 10px;
+            color: rgb(114, 105, 105);
+
+        }
+
+.div.leftsection button{
+    top: -417px;
+}        

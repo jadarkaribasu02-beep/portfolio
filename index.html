@@ -12,239 +12,18 @@
         rel="stylesheet">
     <link rel="Stylesheet" href="style.css">
     <style>
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 55px;
-            background-color: #f1e5e5;
-            margin: -10px;
 
-        }
-
-        nav ul {
-            display: flex;
-            list-style-type: none;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li a {
-            list-style: none;
-            margin: 29px;
-            text-decoration: none;
-
-
-            font-size: 25px;
-
-        }
-
-        nav ul li a:hover {
-            color: rgb(91, 9, 34);
-            text-decoration: none;
-            font-size: 24px;
-        }
-
-        .left {
-            font-size: 2rem;
-            font-family:unset;
-
-
-        }
-
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-
-            margin: 150px 0;
-        }
-
-        .firstsection>div {
-
-            width: 40%;
-        }
-
-        .firsktsection div {
-
-            width: 30%;
-        }
-
-        .leftsection {
-            margin: 120px 0;
-            font-size: 2.2rem;
-
-        }
-
-        .leftsection .btn {
-            background-color: rgb(233, 241, 239);
-            padding: 15px;
-            border: 3p rgb(201, 200, 219);
-
-
-            background-color: rgb(240, 240, 244);
-
-        }
-
-        .glow-on-hover {
-            width: 220px;
-            height: 30px;
-            border: none;
-            outline: none;
-            color: #fff;
-            background: #111;
-            cursor: pointer;
-            position: relative;
-            z-index: 0;
-            border-radius: 10px;
-            text-decoration: none;
-        }
-
-        .glow-on-hover:before {
-            content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            animation: glowing 20s linear infinite;
-            opacity: 0;
-            transition: opacity .3s ease-in-out;
-            border-radius: 10px;
-        }
-
-        .glow-on-hover:active {
-            color: #000
-        }
-
-        .glow-on-hover:active:after {
-            background: transparent;
-        }
-
-        .glow-on-hover:hover:before {
-            opacity: 1;
-        }
-
-        .glow-on-hover:after {
-            z-index: -1;
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #111;
-            left: 0;
-            top: 0;
-            border-radius: 10px;
-        }
-
-        @keyframes glowing {
-            0% {
-                background-position: 0 0;
-            }
-
-            50% {
-                background-position: 400% 0;
-            }
-
-            100% {
-                background-position: 0 0;
-            }
-        }
-
-
-        .rightsection img {
-            width: 65%;
-            height: 50px 0;
-
-        }
-
-        .red {
-            color: rgb(14, 68, 169);
-        }
-
-        #element {
-            color: rgb(14, 68, 169);
-        }
-
-        .secondsection {
-            max-width: 90vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .secondsection h1 {
-            font-size: 3.4rem;
-            margin: 35px;
-
-        }
-
-        .secondsection .box {
-            background-color: rgb(198, 201, 204);
-            width: 79vw;
-            height: 3px;
-            margin: 30px;
-            display: flex;
-
-        }
-
-        .secondsection span {
-            margin: 44.3px;
-            position: relative;
-            top: 32px;
-        }
-
-
-        .secondsection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: rgb(199, 199, 234);
-            margin: 0 120px;
-
-        }
-
-        .image-top {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
-            font-size: 25px;
-        }
-
-        .verticle-desc {
-            padding: 0px;
-            margin: 0px;
-            position: relative;
-            top: 77px;
-            width: 150px;
-            font-size: 10px;
-            color: rgb(114, 105, 105);
-
-        }
     </style>
 </head>
 
 <body>
 
     <nav>
-        <div class="left">karibasu</div>
-        <div class="right"></div>
-        <ul>
-            <li><a href="#ka">Home</a></li>
-            <li><a href="#ka">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="https://github.com/jadarkaribasu02-beep" target="_blank">Projects</a></li>
-            <li><a href="#uglukaribasu">Contact Me</a></li>
-        </ul>
+        <a href="#x">HOME</a>
+        <a href="#ka">SKILLS</a>
+        <a href="#ugly">ABOUT</a>
+        
+        <div id="indicator">
     </nav>
 
     </div>
@@ -263,20 +42,20 @@
                     <div class="buttons">
 
                     </div>
-                    <a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D"
-                        class="glow-on-hover" type="button" > instagram</a>
-                    
+                    <a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D" class="glow-on-hover"
+                        type="button"> karibasu</a>
+
 
 
                 </div>
             </div>
-            <div class="rightsection">
+            <div class="rightsection" id = "x">
                 <img src="1.png" alt="">
             </div>
 
         </section>
         <hr>
-        <section class="secondsection " id="skills">
+        <section class="secondsection " id= "ugly">
             <span class="text-gray">exploring how the web works</span>
             <h1>journey</h1>
             <div class="box">
@@ -347,7 +126,7 @@
 
     <body>
         <footer>
-            <div class="footer"id="uglukaribasu">
+            <div class="footer" id="uglukaribasu">
                 <div class="row">
                     <a href="https://github.com/jadarkaribasu02-beep" target="_blank"><i class="fa fa-github"></i></a>
                     <a href="https://www.instagram.com/karibasu02?igsh=MWd4OW95ZzBhczFjdQ%3D%3D" target="_blank"><i
@@ -359,7 +138,7 @@
                 <div class="row">
                     <ul>
                         <li><a href="home">Contact us</a></li>
-                        
+
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
                         <li><a href="#">Career</a></li>
