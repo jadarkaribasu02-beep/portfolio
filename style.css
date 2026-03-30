@@ -151,6 +151,7 @@ nav a:after {
 
 nav a:nth-child(1):before {
   background-color: rgb(4, 0, 255);
+
 }
 
 nav a:nth-child(1):after {
@@ -175,7 +176,7 @@ nav a:nth-child(3):after {
 
 #indicator {
   position: absolute;
-  left: 6%;
+  left: 9%;
   bottom: 0;
   width: 30px;
   height: 3px;
@@ -196,7 +197,7 @@ nav a:hover:after {
 
 nav a:nth-child(1):hover~#indicator {
   background: linear-gradient(130deg, yellow, red);
-  left: 9%;
+  left: 15%;
 }
 
 nav a:nth-child(2):hover~#indicator {
@@ -262,14 +263,14 @@ nav a:nth-child(4):hover~#indicator {
             height: 30px;
             border: none;
             outline: none;
-            color: #2e24ba;
-            background: #f8f0fb;;
+            color: #dfdedd;
+            background: 0a195a;;
             cursor: pointer;
             position: relative;
             z-index: 0;
-            border-radius: 7.1px;
+            border-radius: 20px;
             text-decoration: none;
-            top: -387px;
+            top: 3px;
             font-size: 29.5px;
         }
 
